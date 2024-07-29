@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  empl_db:
+    image: mysql:latest
+    container_name: mysql_empl_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=employee
+    ports:
+      - "3307:3306"
+    restart: always
+  account_db:
+    image: mysql:latest
+    container_name: mysql_account_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=account
+    ports:
+      - "3308:3306"
+    restart: always
